@@ -14,7 +14,7 @@ ISO/IEC9126-1:2001やISO/IEC25010:2011 SQuaRE(System and Software Quality Requir
 \begin{figure}[htbp]
   \begin{minipage}{\hsize}
     \begin{center}
-       \fbox{\includegraphics[width=100mm]{img/square.png}}
+       \includegraphics[width=100mm]{img/square.png}
     \end{center}
     \caption{SQuaREを基にしたJIS X 25010:2013の品質モデル　画像入れ直すこと}
     \label{fig:square}
@@ -52,7 +52,7 @@ ISOのSQuaREに対してUX白書のUXの定義では時間相が明確になっ�
 \begin{figure}[htbp]
   \begin{minipage}{\hsize}
     \begin{center}
-       \fbox{\includegraphics[width=100mm]{img/lifecycle.png}}
+       \includegraphics[width=100mm]{img/lifecycle.png}
     \end{center}
     \caption{UXのライフサイクル\cite{uxwhitepaper}}
     \label{fig:lifecycle}
@@ -96,14 +96,14 @@ UXメトリクスとは，UXを何らかの数的指標として測定するも�
 \begin{figure}[htbp]
 \begin{minipage}{0.5\hsize}
     \begin{center}
-       \fbox{\includegraphics[width=60mm]{img/device2.jpg}}
+       \includegraphics[width=60mm]{img/device2.jpg}
     \end{center}
     \caption{指尖用光電式容積脈波計}
     \label{fig:device2}
   \end{minipage}
   \begin{minipage}{0.5\hsize}
     \begin{center}
-       \fbox{\includegraphics[width=60mm]{img/device1.jpg}}
+       \includegraphics[width=60mm]{img/device1.jpg}
     \end{center}
     \caption{耳朶用光電式容積脈波計}
     \label{fig:device1}
@@ -116,13 +116,21 @@ UXメトリクスとは，UXを何らかの数的指標として測定するも�
 
 \subsection{自律神経バランス(ANB)}
 
-RRIのゆらぎは0.15-0.4Hzの高周波(HF)と0.004-0.15Hzの低周波(LF)の成分に分けられる．HF成分の0.15-0.4Hzは呼吸周波数(多くの人の呼吸数は秒間9-24回)であり，呼吸によるRRIの変動に対応している．この値は副交感神経が活性化すると高くなる\cite{lehrer}．LF成分は血圧変動であるメイヤー波に対応しており，交感神経と副交感神経の両方の活動を反映している．LFに対する副交感神経の影響は0.15Hz以下の深呼吸をしている間に現れる．そのためリラックスしている際は副交感神経の増大によってLFの値が高くなる\cite{trytech}．
+RRIのゆらぎは0.15-0.4Hzの高周波(HF)と0.004-0.15Hzの低周波(LF)の成分に分けられ，それぞれ副交感神経活動，交感神経活動の指標として考えられている\cite{yamaguchi}．HF成分の0.15-0.4Hzは呼吸周波数(多くの人の呼吸数は秒間9-24回)であり，呼吸によるRRIの変動に対応している．この値は副交感神経が活性化すると高くなる\cite{lehrer}．LF成分は血圧変動であるメイヤー波に対応しており，交感神経と副交感神経の両方の活動を反映している．LFに対する副交感神経の影響は0.15Hz以下の深呼吸をしている間に現れる．そのためリラックスしている際は副交感神経の増大によってLFの値が高くなる\cite{trytech}．
 
-LF/HFで比をとることによってHF成分とLF成分のバランスを表すことができ，このバランスを自律神経バランス(ANB: Autonomic Nervous Balance)という．副交感神経はHFとLF両方に影響するためLF/HFは交感神経の活性度となる．一般には数値が高いと交感神経優位，低いと副交感神経優位を表し，高いほどストレスが高いといえる．
+LF/HFで比をとることによってHF成分とLF成分のバランスを表すことができ，このバランスを自律神経バランス(ANB: Autonomic Nervous Balance)という．副交感神経はHFとLF両方に影響するためLF/HFは交感神経の活性度と考えられる\cite{yamaguchi}．一般には数値が高いと交感神経優位，低いと副交感神経優位を表すため，高いほどストレスが高いといえる．
 
-しかし，LF/HFで示される値はいくつかの算出方法があり，算出方法によって値が変化する．そして，自律神経以外の要因でも心拍変動は起きるためこの値だけで判断することはできない．また，この値を計算するには3分から5分程度の計測が推奨されており\cite{nakagawa}，ユーザビリティ評価での活用には制約がある．
+しかし，HF，LF，LF/HFで示される値はいくつかの算出方法があり，算出方法によって値が変化する．そして，自律神経以外の要因でも心拍変動は起きるためこの値だけで判断することはできない．また，この値を計算するには3分から5分程度の計測が推奨されており\cite{nakagawa}，ユーザビリティ評価での活用には制約がある．
 
 \subsection{最大リヤプノフ指数(LLE)}
+
+最大リヤプノフ指数は，カオティック\footnote{カオス(混沌)とも言い，パワー・スペクトルがいくつかの鋭いピークを持ちながらも，それとは別に連続的成分をある幅にわたって持つときこれをカオティックな運動と呼ぶ\cite{berje}}な情報である脈波変動(BVP)について計算するとそのゆらぎの度合いを示す指標となる\cite{oyama2012}．な自律神経バランス(ANB)は長年にわたって研究されており心理学系の研究等で実績があるものの，周波数領域の解析であるため3分以上の脈波計測データの使用が推奨されるように短時間での計測が難しい．本研究では一時的UX\cite{uxwhitepaper}の変化を捉えようとしており，この制約が障害になる可能性がある．そこで，時間領域で解析を行う最大リヤプノフ指数(LLE: Largest Lyapunov Exponent)に着目した．
+
+リヤプノフ指数は，トラジェクトリー\footnote{空間中の軌跡}の分離の速さを表すことで，カオティックな流れの時間発展の追跡を容易にすることができる\cite{berje}．実験データにおいては時間成分が含まれるため，期間内のリヤプノフ指数の最大値である最大リヤプノフ指数を用いる．雄山らは，この最大リヤプノフ指数で脈波変動(BVP)のゆらぎを解析する手法を提案している\cite{oyama2006}．そして，その指標が不安，恐怖，安堵といった精神状態と関係があることを明らかにしている\cite{imanishi2007}．雄山は著書の中で，最大リヤプノフ指数が大きいのは肯定的には行動的で積極的な状態・否定的には不安定で危なっかしい状態であり，小さいのは変化を好まないかたくなな状態・外部適応が困難な状態と表現している\cite{oyama2012book}．
+
+
+
+
 
 
 
