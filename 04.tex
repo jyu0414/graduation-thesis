@@ -67,7 +67,7 @@ UXグラフと関連付けるイベントの取得には，使用の様子を動
 
 センサが接続されるとPreviewのフィールドに波形が表示される．波形が安定したことを確認して開始ボタンをクリックすると記録したBVPを保存するファイルを選択するダイアログが表示される．このシステムでは，BVPの計測データが大量になることからメモリ上に保存せずファイルに直接書き出す方式を採用している．通常のWebアプリケーションではファイルへの逐次書き出しが許可されていないため，いくつかのブラウザで実験的に実装されているFile System API\cite{filesystemapi}を使用してこれを可能にした．
 
-BVPの記録を終了した後，分析ボタンをクリックすると脈波解析エンジンにデータが送られ，結果が図\ref{fig:uxgraph1}のように時系列で可視化される．RRIとHFLFは高いほどストレスが高く，LLE(Lyapunov)は低いほどストレスが高いことを表す．
+BVPの記録を終了した後，分析ボタンをクリックすると脈波解析エンジンにデータが送られ，結果が図\ref{fig:uxgraph1}のように時系列で可視化される．RRIとANB(HFLF)は高いほどストレスが高く，LLE(Lyapunov)は低いほどストレスが高いことを表す．
 
 \begin{figure}[htbp]
   \begin{minipage}{\hsize}
@@ -80,6 +80,18 @@ BVPの記録を終了した後，分析ボタンをクリックすると脈波�
 \end{figure}
 
 BVPの計測と同時に操作画面のスクリーンキャプチャや第三者視点での動画を収録し，それらの動画とストレスの値を関連付けることで，どの操作をしているときにストレスが高くなったのか，あるいはストレスが低かったのかを明らかにすることができる．
+図\ref{fig:eventmap}
+%詳しく書く
+
+\begin{figure}[htbp]
+  \begin{minipage}{\hsize}
+    \begin{center}
+       \includegraphics[width=100mm]{img/eventmap}
+    \end{center}
+    \caption{イベントのタイミング入力画面}
+    \label{fig:eventmap}
+  \end{minipage}
+\end{figure}
 
 \section{妥当性検討実験の計画}
 
@@ -106,7 +118,7 @@ BVPの計測と同時に操作画面のスクリーンキャプチャや第三�
 
 \subsection{タスクの実施}
 
-\subsection{容積脈波(BVP)の計測}
+\subsection{容積脈波(BVP)の計測と動画の収録}
 
 \begin{figure}[htbp]
   \begin{minipage}{\hsize}
