@@ -79,17 +79,25 @@ BVPの記録を終了した後，分析ボタンをクリックすると脈波�
   \end{minipage}
 \end{figure}
 
-BVPの計測と同時に操作画面のスクリーンキャプチャや第三者視点での動画を収録し，それらの動画とストレスの値を関連付けることで，どの操作をしているときにストレスが高くなったのか，あるいはストレスが低かったのかを明らかにすることができる．
-図\ref{fig:eventmap}
-%詳しく書く
+BVPの計測と同時に操作画面のスクリーンキャプチャや第三者視点での動画を収録し，それらの動画とストレスの値を関連付けることで，どの操作をしているときにストレスが高くなったのか，あるいはストレスが低かったのかを明らかにすることができる．動画と脈波のタイミングを合わせ，実験の開始，終了，休憩の開始，終了などのイベントと関連付ける機能の画面を図\ref{fig:eventmap1}図\ref{fig:eventmap2}に示す．このシステムでは，簡易的に各動画の収録開始時刻と脈波の記録開始時刻を入力することでこれらを同期できるようになっている．また，表示される動画のタイムバーを操作するともう一方の動画の再生時刻も同期された時刻に変化するようになっており，第三者視点の動画とスクリーンキャプチャの双方からイベントのタイミングを探すことができる．
 
 \begin{figure}[htbp]
   \begin{minipage}{\hsize}
     \begin{center}
-       \includegraphics[width=100mm]{img/eventmap}
+       \includegraphics[width=100mm]{img/analyzer1}
     \end{center}
-    \caption{イベントのタイミング入力画面}
-    \label{fig:eventmap}
+    \caption{動画及びBVPの同期画面}
+    \label{fig:eventmap1}
+  \end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \begin{minipage}{\hsize}
+    \begin{center}
+       \includegraphics[width=100mm]{img/analyzer2}
+    \end{center}
+    \caption{イベントタイミングの入力画面}
+    \label{fig:eventmap2}
   \end{minipage}
 \end{figure}
 
@@ -119,11 +127,32 @@ BVPの計測と同時に操作画面のスクリーンキャプチャや第三�
   \end{minipage}
 \end{figure}
 
-
-
 \subsection{タスクの実施}
 
+実験A Good UI，実験A Bad UI，実験B Good UI，実験B Bad UIをカウンターバランスを取って順番に実施した．実験はそれぞれ3分間で行い，各実験の間と前後に3分間の休憩を設けた．また，実験の指示に差がでないように以下のような教示文を印刷して提示した．
+
+\begin{itembox}[l]{実験Aの教示文}
+\begin{verbatim}
+この実験は数学の基礎的な能力を測るものです．実験を開始すると右のような画面が表示されます．
+上に数字，その下に入力画面，その下にテンキーが表示されます．上に表示されている数字を小さい順に入力画面に打ち込んで，打ち込み終わったら決定ボタンを押してください．
+入力を間違えた場合は，クリアボタンを押すことで入力を取り消すことができます．正解すると正解のアラート，不正解だと不正解のアラートが表示されます．制限時間は3分間です．できるだけ沢山正解するように頑張ってください
+操作方法で何かわからないことはありますか？
+課題を開始したらもし課題に問題点や疑問点があっても課題を継続してください．それでは始めてください．
+\end{verbatim}
+\end{itembox}
+
+\begin{itembox}[l]{実験Bの教示文}
+\begin{verbatim}
+この課題は細かい操作の速さと正確さの能力を測るものです．実験を開始すると右のような画面が表示されます．
+ブルーの通路の右上にブルーのボールが配置されています．このボールを指でスライドするとスライドした方向に移動します．ブルーの道からはみ出さないように一番下までボールを持っていってください．はみ出すとボールは最初に戻り最初からやり直しになります．正解すると正解のアラート，不正解だと不正解のアラートが表示されます．制限時間は3分間です，できるだけ多くの回数成功させてください．
+操作方法で何かわからないことはありますか？
+課題を開始したらもし課題に問題点や疑問点があっても課題を継続してください．それでは始めてください．
+\end{verbatim}
+\end{itembox}
+
 \subsection{容積脈波(BVP)の計測と動画の収録}
+
+実験ではBVPを耳朶用のセンサーによって測定し，合わせて実施の様子を第三者視点，スクリーンキャプチャの形式で動画記録した．実験の様子を図\ref{fig:observe}に示す．
 
 \begin{figure}[htbp]
   \begin{minipage}{\hsize}
@@ -136,9 +165,12 @@ BVPの計測と同時に操作画面のスクリーンキャプチャや第三�
 \end{figure}
 
 \subsection{アンケートの実施}
-\cite{stressquestionare}
+
+実験の前後にアンケートをウェブフォームの形式で実施した．実験の前には被験者を特定するための情報，精神状態やストレスに影響を与える可能性のある就寝時刻と起床時刻，前提知識に影響を与える趣味や職種であるかを尋ねた．実験の後には，それぞれの実験についての所感を自由記述で求めた．合わせて前提知識の影響を調べるためにスマートフォンやコンピュータの使用歴を，ストレス耐性を調べるためにストレス反応尺度であるSRS-18\cite{stressquestionare}の質問紙に基づく項目を尋ねた．
 
 \section{実験の結果}
+
+実験では実験A，実験BそれぞれのGood UI，Bad UIについて，BVPと動画を記録し，アンケートの回答が得られた．アンケートによると，Good UI，Bad UIとして想定したデザインについて全ての被験者から前者を肯定的に，後者を否定的に感じたという回答が得られた．アンケートで得られた被験者の概要を表\ref{table:exp2result1}に，各実験に対する所感を集計した結果を表\ref{table:negaposi}，表\ref{table:nega}，表\ref{table:posi}に示す．自由記述で得られた所感はQDAソフトのNVivoを用いて分類し集計した．但し，一人の被験者が複数の意見を記述している場合があるため回答の件数の合計は被験者数と一致しない．実験A，実験BそれぞれについてGood UIには肯定的な意見，Bad UIには否定的な意見が多かった．特に実験BのBad UIでは，使いやすさとしてはGood UIを良いとしたもののBad UIについて肯定的な反応を付け加える例があった．それらの意見では実験Bがゲーム性のあるアプリケーションであったことを挙げており．成功した際の達成感などについて述べていた．
 
 \begin{table}[htbp]
 \centering
@@ -206,8 +238,40 @@ BVPの計測と同時に操作画面のスクリーンキャプチャや第三�
 \label{table:exp2result1}
 \end{table}
 
-
 \section{実験の分析}
+
+得られた脈波は開発したシステムによってイベントに基づいて編集，実験A Good UI，実験A Bad UI，実験B Good UI，実験B Bad UI及びその前後の休憩時をイベントとしてそれぞれANB，LLE，RRIを算出した．本システムでは，第\ref{chap:pulsewave}章の実験と異なり，前述のように10秒毎の時系列変化としてそれらの値が表示される．表示される結果の例を図\ref{fig:llea1}-\ref{fig:lleb2}に示す．これらのグラフは縦軸がLLE，横軸が10秒刻みの時間となっている．LLEのほかにもRRI，ANBについて動揺にグラフにプロットしたが，いずれも大きな揺れがあった．また，1つのグラフで表されるイベント期間中の代表値として平均値をとりGood UIとBad UIを比較したが関連を見出すことができなかった．
+
+\begin{figure}[htbp]
+  \begin{minipage}{0.5\hsize}
+    \begin{center}
+       \includegraphics[width=80mm]{img/lle/1A-1.png}
+    \end{center}
+    \caption{被験者1 実験A Bad UIのLLE}
+    \label{fig:llea1}
+  \end{minipage}
+    \begin{minipage}{0.5\hsize}
+    \begin{center}
+       \includegraphics[width=80mm]{img/lle/1A-2.png}
+    \end{center}
+    \caption{被験者1 実験A Good UIのLLE}
+    \label{fig:llea2}
+  \end{minipage}
+    \begin{minipage}{0.5\hsize}
+    \begin{center}
+       \includegraphics[width=80mm]{img/lle/1B-1.png}
+    \end{center}
+    \caption{被験者1 実験B Bad UIのLLE}
+    \label{fig:lleb1}
+  \end{minipage}
+    \begin{minipage}{0.5\hsize}
+    \begin{center}
+       \includegraphics[width=80mm]{img/lle/1B-2.png}
+    \end{center}
+    \caption{被験者1 実験B Good UIのLLE}
+    \label{fig:lleb2}
+  \end{minipage}
+\end{figure}
 
 \begin{table}[htbp]
 \centering
@@ -270,6 +334,13 @@ BVPの計測と同時に操作画面のスクリーンキャプチャや第三�
 \label{table:nega}
 \end{table}
 
-
 \section{実験の考察}
+
+本実験では，被験者の満足度についてGood UIとBad UIで明確に差があったにも関わらず，現時点でLLE，ANB，RRIと満足度の間の関連性を明らかにすることができなかった．しかし，第\ref{chap:pulsewave}章の研究では，少なくともANBについて満足性と関連性が明らかになっている．そのため，満足性とこれらの値に全く関連性がないわけではなく，時系列のストレス指標の分析方法を改めて検討する必要があると考える．
+
+今回の実験では，それぞれの実験を1つのイベントとして捉えまとめて解析していたが，実際には実験内でも待つ時間，ボタンを押す時間，押し方を検討する時間などより詳細なイベントが存在している．それらのイベントとストレスの変化の関連性を改めて詳細に分析していく必要がある．また，ストレスがかかるイベントが発生してから各指標に反映されるまでの時間についても研究していく必要があると考える．
+
+加えて，Good UIとBad UIについての被験者の所感を分析した結果，特に実験2においてBad UIとして用意したものがポジティブに評価される例があった．ゲームのような機能よりもアプリケーションの使用自体が目的となる場合においてはユーザが感じるUXの基準がユーティリティアプリケーションとは異なり，ユーザビリティ(設計上の品質)の基準も異なっていなければならないということが示唆された．
+
+
 
